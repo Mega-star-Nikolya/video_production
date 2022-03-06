@@ -8,16 +8,17 @@ sourceMap: true  - показывает в каком плоке находит�
 /*Задаем стили для всей страницы*/
 html {
     /* Задаем высоту основного шрифта */
-    font-size: 15px;
+    font-size: 14px;
 }
 
 body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     /*Дальше нужно посмотреть какой основной шрифт везде используется*/
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
-    background-color: #fff;
+    background-color: #17191C;
+;
 }
 
 *,
@@ -40,32 +41,19 @@ p {
     margin: 0 0 10px;
 }
 
-hr{
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin: 40px 0;
-    border: 0;
-    background-color: #e5e5e5;
-}
-
 img {
     max-width: 100%;
     height: auto;
 }
 
-.page {
-    overflow: hidden;
-}
-
 // blocks
 @import "blocks/_container.less";
+@import "blocks/_start.less";
 @import "blocks/_header.less";
-@import "blocks/_nav.less";
-@import "blocks/_nav-toggle.less";
-@import "blocks/_search.less";
 @import "blocks/_intro.less";
-@import "blocks/_slider.less";
+@import "blocks/_nav.less";
+
+@import "blocks/_nav-toggle.less";
 @import "blocks/_btn.less";
 @import "blocks/_section.less";
 @import "blocks/_card.less";

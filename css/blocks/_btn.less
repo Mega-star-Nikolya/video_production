@@ -1,21 +1,37 @@
 // main: ../style.less
 .btn {
     display: inline-block;
-    vertical-align: top;
-    padding: 7px 27px;
+    /* vertical-align: top; */
 
-    border: solid 3px @color_2;
+    background: @color_1;
+    border-radius: 35px;
 
     color: @color_2;
+    font-family: inherit;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
 
-    transition: background-color .2s linear, color .2s linear;
+    transition: background .2s linear, color .2s linear, box-shadow .2s linear;
+}
+
+.btn--start {
+    max-width: 168px;
+    max-height: 55px;
+    padding: 18px 58px;
+}
+
+.btn--intro {
+    max-width: 195px;
+    max-height: 55px;
+    padding: 18px 53.5px;
 }
 
 .btn:hover {
-    background-color: @color_2;
-    color: #746634;
+    color: rgba(255, 255, 255, 0.884);
+background: @color_2;
+box-shadow: 0px 4px 7px rgba(218, 1, 0, 0.3);
 }
+
+

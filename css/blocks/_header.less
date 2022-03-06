@@ -1,7 +1,7 @@
 // main: ../style.less
 .header {
     width: 100%;
-    padding-top: 30px;
+    padding-top: 25px;
 
     position: absolute;
     top: 0;
@@ -23,29 +23,3 @@
     text-decoration: none;
 }
 
-.header.fixed {
-    height: auto;
-    position: fixed;
-    background-color: #f38181;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-
-    transform: translate3d(0, 0, 0);
-}
-
-.header.fixed .header__inner {
-    height: 50px;
-    border-bottom: 0;
-}
-
-.header.active {
-    background-color: #f38181;
-}
-
-@media @breakpoint-iPad {
-    .header {
-        padding: 10px 0;
-    }
-    .header__logo {
-        padding-left: 20px;
-    }
-}
