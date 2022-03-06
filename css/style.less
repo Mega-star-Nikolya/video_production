@@ -1,0 +1,53 @@
+// compress: true, sourceMap: true
+/* false - в файле css все в нормальном рассширенном варианте
+true -в файле css все в сжатом состоянии 
+sourceMap: true  - показывает в каком плоке находиться классы*/
+@import "_vars";
+
+
+/*Задаем стили для всей страницы*/
+html {
+    /* Задаем высоту основного шрифта */
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    /*Дальше нужно посмотреть какой основной шрифт везде используется*/
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Подключение шрифтов с локальной папки - Указан пример */
+
+@font-face {
+    font-family: 'Webdings', sans-serif;
+    src: local('Webdings') url(/fonts/Webdings.ttf) format('truetype');
+}
+// blocks
+@import "blocks/_container.less";
