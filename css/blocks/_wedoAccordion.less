@@ -1,0 +1,109 @@
+// main: ../style.less
+
+.wedo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.wedo__item {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.accordion__item {
+    margin-bottom: 10px;
+    border: solid 1px #e5e5e5;
+}
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__item.active .accordion__header {
+    border-bottom-color: #e5e5e5;
+}
+
+.accordion__item.active .accordion__header::after {
+    transform: translateY(-20%) rotate(-45deg);
+}
+
+.accordion__header {
+    padding: 20px 20px 20px 65px;
+    position: relative;
+
+    border: solid 1px transparent;
+    cursor: pointer;
+}
+
+.accordion__header::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    z-index: 1;
+
+    transform: translateY(-80%) rotate(135deg);
+}
+
+.accordion__icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.accordion__content {
+    padding: 15px 50px 20px 20px;
+    display: none;
+
+    p{
+    font-family: @font-family-Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: left;
+    color: #999;
+    }
+}
+
+.accordion__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+@media @breakpoint-iPad {
+    .wedo__img {
+        display: none;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+}
+
+@media @breakpoint-mobileMini {
+    .accordion__header::after {
+        right: 6px;
+    }
+}
+
+

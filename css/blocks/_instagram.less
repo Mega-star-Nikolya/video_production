@@ -1,0 +1,33 @@
+// main: ../style.less
+
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.instagram__item {
+    width: 33%;
+    border-bottom: 1px solid @color_2;
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        transition: opacity .2s linear;
+    }
+}
+
+.instagram__item img:hover {
+    opacity: 0.5;
+}
+
+@media @breakpoint-iPadPro {
+    .instagram {
+        justify-content: flex-start;
+    }
+    .instagram__item {
+        width: auto;
+        border-right: 1px solid @color_2;
+    }
+}

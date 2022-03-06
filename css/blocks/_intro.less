@@ -1,0 +1,82 @@
+// main: ../style.less
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 820px;
+    position: relative;
+
+    background: #f38181 url("@{img}intro.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.inrto__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro__suptitle {
+    margin-bottom: 20px;
+
+    font-family: @font-family-Kaushan;
+    font-size: 72px;
+}
+
+.intro__title {
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 0.93;
+    text-transform: uppercase;
+}
+
+.intro__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+
+    background-color:  #fff;
+}
+
+@media @breakpoint-NestHubMax {
+
+    .intro__suptitle {
+        font-size: 52px;
+    }
+    .intro__title {
+        font-size: 120px;
+    }
+}
+
+@media @breakpoint-iPadPro {
+    .intro__suptitle {
+        font-size: 32px;
+    }
+
+    .intro__title {
+        font-size: 80px;
+    }
+}
+
+@media @breakpoint-iPad {
+    .intro {
+        min-height: 570px;
+    }
+}
+
+@media @breakpoint-mobile {
+    .intro__suptitle {
+        font-size: 22px;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+}

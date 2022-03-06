@@ -1,0 +1,119 @@
+// main: ../style.less
+
+.footer {
+    padding-top: 65px;
+    background-color: #f8f8f8;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+    padding-bottom: 65px;
+}
+
+.footer__col {
+    padding: 0 15px;
+}
+
+.footer__col--first {
+    width: 40%;
+}
+
+.footer__col--second {
+    width: 30%;
+}
+
+.footer__col--third {
+    width: 22%;
+}
+
+.footer__logo {
+    margin-bottom: 30px;
+
+    font-size: 46px;
+    font-weight: 800;
+    color: #ccc;
+}
+
+.footer__text {
+    margin-bottom: 30px;
+
+    font-family: @font-family-Roboto;
+    line-height: 1.6;
+    color: @color_1;
+}
+
+.footer__social {
+    margin-bottom: 25px;
+}
+
+.footer__social-header {
+    padding-bottom: 15px;
+
+    font-size: 14px;
+    color: #333;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.footer__social-content {
+    padding-top: 15px;
+
+    span {
+        font-family: Roboto;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.6;
+        color: @color_1;
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+
+        font-size: 16px;
+        color: #95e1d3;
+    }
+}
+
+.footer__titli {
+    margin: 30px 0;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: @color_3;
+    text-transform: uppercase;
+}
+
+@media @breakpoint-iPadPro {
+    .footer__col--first {
+        width: 100%;
+    }
+
+    .footer__col--second,
+    .footer__col--third{
+        width: 50%;
+    }
+
+    .footer__logo {
+        text-align: center;
+    }
+}
+
+@media @breakpoint-iPad {
+    .footer__col--second,
+    .footer__col--third{
+        width: 100%;
+    }
+
+    .footer__titli {
+        text-align: center;
+    }
+}

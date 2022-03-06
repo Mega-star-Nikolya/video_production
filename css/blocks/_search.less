@@ -1,0 +1,70 @@
+// main: ../style.less
+
+.search__btn {
+    display: none;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    right: -80px;
+    top: 1px;
+    z-index: 2;
+
+}
+
+.search__input {
+    width: 140px;
+    padding: 5px 45px 5px 10px;
+
+    box-sizing: border-box;
+    background-color: #fdafaf;
+    box-shadow: 0 0 20px 0  #9b3a3a;
+    border: none;
+    outline:none;
+    border-radius: 22px;
+    opacity: 0;
+
+    font-family: @font-family-Roboto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+
+    position: absolute;
+    left: -35px;
+    top: -4px;
+    z-index: -1;
+
+    transition-duration: 0.5s;
+    transition-property: opacity;
+}
+
+.nav__linkSearch {
+    cursor: pointer;
+}
+
+.nav__linkSearch--active {
+    input {
+        opacity: 1;
+        z-index: 1;
+    }
+    .search__btn {
+        display: block;
+    }
+    .search__img {
+        display: none;
+    }
+}
+
+.nav__linkSearch--active.nav__link {
+    cursor: default;
+}
+
+.nav__linkSearch--active.nav__link:hover::after {
+    opacity: 0;
+}
+
+
+

@@ -1,0 +1,51 @@
+// main: ../style.less
+.header {
+    width: 100%;
+    padding-top: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header.fixed {
+    height: auto;
+    position: fixed;
+    background-color: #f38181;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+
+    transform: translate3d(0, 0, 0);
+}
+
+.header.fixed .header__inner {
+    height: 50px;
+    border-bottom: 0;
+}
+
+.header.active {
+    background-color: #f38181;
+}
+
+@media @breakpoint-iPad {
+    .header {
+        padding: 10px 0;
+    }
+    .header__logo {
+        padding-left: 20px;
+    }
+}
