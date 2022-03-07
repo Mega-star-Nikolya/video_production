@@ -30,8 +30,34 @@
 
 .btn:hover {
     color: rgba(255, 255, 255, 0.884);
-background: @color_2;
-box-shadow: 0px 4px 7px rgba(218, 1, 0, 0.3);
+    background: @color_2;
+    box-shadow: 0px 4px 7px rgba(218, 1, 0, 0.3);
 }
 
+.btn--card {
+    display: inline-block;
+    max-width: 198px;
+    max-height: 55px;
+    padding: 18px 54px;
+
+    background: @color_3;
+    border-radius: 35px;
+    border: 2px solid @color_1;
+
+    color: @color_1;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .2s linear, color .2s linear, box-shadow .2s linear;
+}
+
+.btn--card:hover {
+    color: rgba(255, 255, 255, 0.884);
+    background: @color_1;
+    box-shadow: 0px 4px 7px rgba(218, 1, 0, 0.3);
+}
 
