@@ -1,107 +1,41 @@
 // main: ../style.less
 
 .card {
-    margin: 80px -15px;
     display: flex;
     justify-content: space-between;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -259px;
+    z-index: 1;
 }
 
 .card__item {
-    width: 380px;
-    padding: 0 15px;
-}
-
-.card__inner {
-    position: relative;
-    background-color: @color_1;
-}
-
-.card__inner:hover {
-.card__img {
-    transform: translate3d(-10px, -10px, 0);
-}
-.card__users {
-    opacity: 1;
-    img {
-        opacity: 1;
-    }
-}
-}
-
-.card__inner:hover {
-img {
-    opacity: 0.1;
-}
-}
-
-.card__img {
-    background: linear-gradient(to top, #fce38a, #f38181), linear-gradient(to bottom, #fce38a, #fce38a);
-    transition: transform .2s linear;
-
-    img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        transition: opacity .2s linear;
-}
-}
-
-.card__users {
-    width: 100%;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: 2;
-    transform: translate3d(0, -50%, 0);
-    transition: opacity .2s linear;
-img {
     display: block;
-    margin: 0 auto 10px;
-}
-.card__text {
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-}
+    margin: 0 13.5px;
+    width: 362px;
+    height: 476px;
+
+    background: @color_3;
+    border-radius: 5px;
 }
 
 .card__info {
-    margin-top: 25px;
-
-    text-align: center;
-}
-.card__name {
-    margin-bottom: 5px;
-
-    font-size: 14px;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
+    color: #666666;
 }
 
-.card__prof {
+.card__info-title {
+    color: #000;
+}
+
+.card__info-subtitle {
     
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.6;
-    color: #999;
-}
-
-@media @breakpoint-iPad {
-    .card {
-        margin: 40px -15px;
-        flex-wrap: wrap;
-        justify-content: center;
-}
-
-    .card__item {
-        width: 100%;
-        max-width: 410px;
-        margin-bottom: 30px;
-}
-    .card__item:last-child {
-        margin-bottom: 0;
-}
+    span {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        color: #000;
+    }
 }

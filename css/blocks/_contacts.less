@@ -11,29 +11,23 @@
 }
 
 .contacts__workhours {
+  width: 97px;
+  margin-left: 97px;
   position: relative;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 20px;
-  text-align: right;
   cursor: pointer;
 
-  color: @color_3;
-
-  transition: text-decoration .3s linear, color .3s linear;
-}
-
-.contacts__workhours:hover {
   color: @color_2;
   text-decoration: underline;
 }
 
-
-.contacts__workhours .workhours__text {
-  padding: 13px 14px;
-  max-width: 160px;
-  max-height: 80px;
+.contacts__workhours .workhours__text { 
+  padding: 15px 14px;
+  min-width: 160px;
+  min-height: 80px;
 
   font-family: inherit;
   font-style: normal;
@@ -45,19 +39,19 @@
   color: #1E1F20;
 
   visibility: hidden;
-  text-align: center;
   border-radius: 6px;
 
   position: absolute;
   top: 150%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -115px;
   z-index: 1;
   opacity: 0;
   transition: opacity .4s linear;
 }
 
 .workhours__text-bold {
+  padding-bottom: 3px;
   font-weight: 800;
 }
 
