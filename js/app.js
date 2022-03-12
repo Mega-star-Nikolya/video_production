@@ -1,6 +1,6 @@
 let position = 0;
 const slidesToShow = 2;
-const slidesToScroll = 1;
+const slidesToScroll = 2;
 const container = document.querySelector('.slideshow__container');
 const track = document.querySelector('.slideshow__track');
 const btnPrev = document.querySelector('.btn--prev');
