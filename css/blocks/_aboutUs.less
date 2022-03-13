@@ -1,7 +1,47 @@
 // main: ../style.less
 
 .aboutUs {
-  background: #17191C url("@{img}/aboutUs/aboutUs.jpg") center no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
+  margin-bottom: 100px;
+}
+
+.aboutUs__inner {
+  position: relative;
+}
+
+.aboutUs__card {
+  max-width: 785px;
+  max-height: 455px;
+
+  background: @color_3;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 97px;
+  left: 354px;
+  z-index: 1;
+}
+
+.aboutUs__card__info {
+  display: block;
+  margin: 70px 201px 66px 81px;
+
+  color: @color_5;
+}
+
+.aboutUs__card__title {
+  margin-bottom: 37px;
+
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.36;
+
+  text-transform: uppercase;
+}
+
+.aboutUs__card__text {
+  margin-bottom: 43px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.68;
 }
