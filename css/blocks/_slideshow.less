@@ -1,20 +1,31 @@
 // main: ../style.less
 
-.slideshow__container {
-  width: 1164px;
-  overflow: hidden;
+.slideshow__inner {
+  position: relative;
+  height: 394px;
   margin-bottom: 52px;
+}
+
+.slideshow__container {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .slideshow__track {
   display: flex;
-  transition: .2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .slideshow__item {
-  /* min-width: 50%; */
+  width: 50%;
+  min-width: 557px;
   min-height: 394px;
   position: relative;
+  margin-right: 25px;
 }
 
 .slideshow__buttons {
@@ -53,9 +64,9 @@
     background-color: @color_1;
   }
 }
-.btn--prev.active {
+/* .btn--active {
     background-color: @color_1;
-}
+} */
 
 .slideshow__info {
   display: block;
