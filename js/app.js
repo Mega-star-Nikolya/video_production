@@ -1,41 +1,39 @@
-let position = 0;
-const slidesToShow = 2;
-const slidesToScroll = 2;
-const container = document.querySelector('.slideshow__container');
-const track = document.querySelector('.slideshow__track');
-const btnPrev = document.querySelector('.btn--prev');
-const btnNext = document.querySelector('.btn--next');
-const item = document.querySelectorAll('.slideshow__item');
-const itemCount = item.length;
-const itemWidth = container.clientWidth / slidesToShow;
-const movePosition = slidesToScroll * itemWidth;
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
 
-item.forEach((item) => {
-    item.style.minWidth = `${itemWidth}px`;
-});
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
 
-btnNext.addEventListener('click', () => {
-    const itemLeft = itemCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-    position -= itemLeft >= slidesToScroll ? movePosition : itemLeft * itemWidth;
-    setPosition();
-    checkBtns();
-});
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);
+}
 
-btnPrev.addEventListener('click', () => {
-    const itemLeft = Math.abs(position) / itemWidth;
-    position += itemLeft >= slidesToScroll ? movePosition : itemLeft * itemWidth;
-    setPosition();
-    checkBtns();
-});
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-const setPosition = () => {
-    track.style.transform = `translateX(${position}px)`;
-};
-
-const checkBtns = () => {
-    btnPrev.disabled = position === 0;
-    btnNext.disabled = position <= -(itemCount - slidesToShow) * itemWidth;
-};
-checkBtns();
-
-// console.log(itemWidth)
+/* Основная функция сладера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slider__track");
+    var dots = document.getElementsByClassName("slider-dots__item");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" actives", "");
+    }
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex - 1].className += " actives";
+}
