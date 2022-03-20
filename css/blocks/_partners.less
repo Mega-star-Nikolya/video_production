@@ -18,31 +18,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 63px 0;
+  align-items: center;
 }
 
 .partners__item {
   width: 25%;
+  text-align: center;
 }
 
-.partners__item:nth-child(2) {
-  padding-top: 11px;
-  padding-left: 82px;
+.partners__item:nth-child(4n+1) {
+  text-align: left;
 }
 
-.partners__item:nth-child(3) {
-  padding-left: 75px;
-}
-
-.partners__item:nth-child(4) {
-  padding-left: 107px;
-}
-
-.partners__item:nth-child(7) {
-  padding-left: 19px;
-}
-
-.partners__item:nth-child(8) {
-  padding-left: 71px;
+.partners__item:nth-child(4n) {
+  text-align: right;
 }
 
 .partners__link {
