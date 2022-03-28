@@ -1,0 +1,81 @@
+// main: ../style.less
+
+.feedback {
+  background-color: @color_9;
+}
+
+.feedback__title {
+  padding: 79px 0 59px;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.36;
+  text-transform: uppercase;
+
+  color: #202020;
+}
+
+.form__row {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 26px;
+}
+
+.form__input {
+  flex: 1;
+  padding: 20px 30px;
+  background: @color_3;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 1.338;
+  outline:none;
+
+  color: #1A1B1E;
+}
+
+.form__input--textarea {
+  height: 235px;
+}
+
+.form__input::placeholder{
+  color: @color_4;
+}
+
+.form__input:focus {
+  border: 1px solid @color_6;
+}
+
+.form__controls {
+  display: flex;
+  margin-bottom: 33px;
+}
+
+.form__controls__title {
+  width: 40%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.388;
+  color: #1A1B1E;
+}
+
+.controls {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 13px;
+}
+
+.controls__checkbox {
+  display: none;
+}
+
+.controls__checkbox:checked ~ .btn__checkbox {
+  background: #F2D4C9;
+}
+
+.form__btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+  padding-bottom: 96px;
+}

@@ -1,34 +1,41 @@
 // main: ../style.less
 .start {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+    margin: 0 auto;
+    width: 1128px;
+    max-height: 643px;
     text-align: center;
-    position: relative;
-
-    background: #17191C url("@{img}/start/bg.jpg") center no-repeat;
-    -webkit-background-size: cover;
+    background: url("@{img}/start/rec.png") center top 158px no-repeat;
     background-size: cover;
 }
 
-.start__photo {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 1;
-}
-
 .start__inner {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 1000;
+    padding-top: 378px;
 }
 
 .start__logo {
     margin-bottom: 20px;
+}
+
+.central--video {
+    opacity: 0;
+    animation: rotateIN 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotateIN {
+    from {
+        transform: scale(0.1) rotate(30deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    70% {
+        transform: rotate(5deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
