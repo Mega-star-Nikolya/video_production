@@ -1,6 +1,58 @@
 // main: ../style.less
 
-.services {
-  position: relative;
-  margin-bottom: 180px;
+.slider--services {
+  margin-bottom: 65px;
+}
+
+.slider__track--services {
+  flex-wrap: wrap;
+  gap: 55px;
+}
+
+.services__slider__item {
+  display: flex;
+  gap: 56px;
+}
+
+.services__slider__info {
+  display: block;
+  color: @color_5;
+  margin-top: 13px;
+  max-height: 333px;
+}
+
+.services__info__title {
+  margin-bottom: 28px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.36;
+}
+
+.services__info__text {
+  margin-bottom: 36px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.68;
+  color: #303030;
+}
+
+.services__slider-dots {
+  margin-bottom: 94px;
+  margin-left: 30px;
+}
+
+.services__slider-dots__text {
+  color: @color_5;
+}
+
+.service__slider-dots__item {
+  color: @color_5;
+}
+
+.actives,
+.service__slider-dots__item:hover {
+    background-color: @color_1;
+    color: @color_3;
 }
