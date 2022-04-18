@@ -5,25 +5,30 @@
 }
 
 .aboutus__inner {
-  position: relative;
+  display: flex;
+}
+
+.aboutus__img {
+  display: block;
+  width: 490px;
+  height: 505px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .aboutus__card {
-  max-width: 785px;
-  max-height: 455px;
-
+  margin-top: 97px;
+  margin-left: -136px;
+  width: 785px;
   background: @color_3;
   border-radius: 5px;
-
-  position: absolute;
-  top: 97px;
-  left: 354px;
-  z-index: 1;
 }
 
 .aboutus__card__info {
   display: block;
-  padding: 70px 201px 66px 80px;
+  max-width: 785px;
+  height: auto;
+  padding: 70px 201px 40px 80px;
 
   color: @color_5;
 }
@@ -44,4 +49,5 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.68;
+
 }
